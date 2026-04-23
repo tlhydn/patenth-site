@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-epilogue: "Epilogue", sans-serif;
+
+  --color-background: #080808;
+  --color-on-background: #FAF9F6;
+  --color-primary: #FAF9F6;
+  --color-on-primary: #080808;
+  --color-surface: #121212;
+  --color-on-surface: #FAF9F6;
+  --color-on-surface-variant: #A1A1A1;
+  --color-outline: #262626;
+  --color-outline-variant: #1A1A1A;
+
+  --spacing-section-gap: 120px;
+  --spacing-gutter: 32px;
+  --spacing-container-margin: 64px;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background antialiased selection:bg-primary selection:text-on-primary font-sans;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.premium-gradient {
+  background: linear-gradient(180deg, rgba(8,8,8,0) 0%, rgba(8,8,8,0.8) 100%);
+}
